@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090014">
+
+    <LinearLayout
+        android:id="@+id/headerEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#170A26"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="60dp"
+        android:paddingBottom="24dp"
+        android:elevation="8dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❮ KEMBALI"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:background="?attr/selectableItemBackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UBAH ESTIMASI RAKITAN"
+            android:textColor="#B388FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTotalHargaEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:textColor="#E0B0FF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerEdit"
+        android:clipToPadding="false"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <EditText android:id="@+id/etEditNama" android:layout_width="match_parent" android:layout_height="60dp" android:padding="16dp" android:textColor="#FFFFFF" android:backgroundTint="#C77DFF" android:layout_marginBottom="12dp"/>
+            <EditText android:id="@+id/etEditKategori" android:layout_width="match_parent" android:layout_height="60dp" android:padding="16dp" android:textColor="#FFFFFF" android:backgroundTint="#C77DFF" android:layout_marginBottom="24dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PILIH PLATFORM" android:textColor="#C77DFF" android:textSize="14sp" android:textStyle="bold"/>
+            <RadioGroup
+                android:id="@+id/rgPlatformEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="12dp">
+                <RadioButton android:id="@+id/rbIntelEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Intel" android:textColor="#FFFFFF" android:buttonTint="#C77DFF" android:layout_marginEnd="32dp" android:checked="true"/>
+                <RadioButton android:id="@+id/rbAMDEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AMD" android:textColor="#FFFFFF" android:buttonTint="#C77DFF"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Prosesor (CPU)" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinCPUEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Motherboard" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinMoboEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kartu Grafis (VGA)" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinVGAEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RAM" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinRAMEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Penyimpanan SSD" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinSSDEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Penyimpanan HDD" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinHDDEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pendingin (Cooler)" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinCoolerEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Power Supply (PSU)" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinPSUEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Casing" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinCasingEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kipas Tambahan (Fan)" android:textColor="#C77DFF" android:textSize="12sp"/>
+            <Spinner android:id="@+id/spinFanEdit" android:layout_width="match_parent" android:layout_height="60dp" android:backgroundTint="#C77DFF" android:layout_marginBottom="32dp"/>
+
+            <Button
+                android:id="@+id/btnUpdateEdit"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="UPDATE DATA"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#7B2CBF"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnDeleteEdit"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="HAPUS DATA"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#FF3366" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

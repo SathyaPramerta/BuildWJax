@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.BuildWjax" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.BuildWjax" parent="Base.Theme.BuildWjax" />
+
+    <style name="Theme.BuildWjaxSplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#110122</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.BuildWjax</item>
+    </style>
+</resources>
